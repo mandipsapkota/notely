@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+body{
+    background-color: lightcyan;
+}
+
+/* form */
+#login{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login-i{
+    background-color: rgb(1, 31, 31);
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+form h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+}
+
+form input , form button{
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    margin: 4px 0;
+}
+
+#login .login-i p{
+    padding: 10px;
+    margin-top:10px;
+    color: rgb(194, 218, 240);
+    font-size: 15px;
+}
+.login-i p a{
+    color: white;
+    display: inline;
+    position: relative;
+    padding: 5px;
+}
+
+.login-i p a:after{
+    width: 0%;
+    height:2px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    transition: all 0.2s ease;
+}
+
+.login-i p a:hover:after{
+    width: 100%;
+
+}
+
+form button{
+
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background-color: green;
+    cursor: pointer;
+    color: lightcyan;
+}
+
+/* Errors */
+.errors{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Error */
+.error{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:5px 15px;
+    background-color:rgb(255, 212, 212);
+    border: 2px solid darkred;
+    border-radius: 10px;
+}
+
+.error button{
+    cursor: pointer;
+    border: none;
+    background-color: darkred;
+    color: aliceblue;
+    padding: 4px 18px;
+    border-radius: 20px;
+}

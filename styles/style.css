@@ -1,0 +1,347 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+/* Navbar */
+
+nav{
+    background-color: rgb(1, 31, 31);
+    /* width: 100%; */
+    color:white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:6px 16px;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+}
+
+nav .icons ul{
+    display: flex;
+}
+
+nav .icons ul li{
+    padding: 5px 10px;
+}
+
+nav .icons ul li a{
+    display: block;
+    color:white;
+    padding: 5px;
+    position: relative;
+
+}
+nav .icons ul li a:after{
+    position: absolute;
+    width: 100%;
+    content: "";
+    height:3px;
+    border-radius: 10px;
+    background-color: rgb(212, 208, 208);
+    bottom:0;
+    left:0;
+    width: 0%;
+    transition: all 0.2s ease;
+}
+
+nav .icons ul li a:hover:after{
+    background-color: white;
+    width: 100%;
+}
+
+
+.login a{
+    display: block;
+    padding: 5px 20px;
+    font-weight: bold;
+    color: rgb(1, 31, 31);
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.login a:hover{
+    background-color: greenyellow;
+    color: rgb(1, 31, 31);
+    
+}
+
+
+/* Home Section  */
+
+.section{
+    height:100vh;
+    padding: 60px;
+}
+#home{
+    border-radius: 0 0 20vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightcyan;
+    overflow: hidden;
+    position: relative;
+}
+
+#home div h1{
+    font-size: clamp(20px , 30px , 40px);
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 30px;
+    background-color: white;
+    border-radius: 40px;
+    position: relative;
+    z-index: 1;
+    
+}
+
+#home div h1 span{
+    font-weight: 800;
+    color:rgb(5, 117, 117);
+    position: relative;
+}
+
+#home:after{
+    background-color: darkcyan;
+    position: absolute;
+    width: 400px;
+    z-index: 0;
+    top: -100px;
+    right: -200px;
+    content: '';
+    height: 400px;
+    border-radius: 20%;
+    border: 10px solid rgb(3, 39, 39);
+    transition: all 0.2s ease;
+    animation: example 3s infinite alternate;
+}
+
+#home:before{
+    background-color: darkcyan;
+    animation: example2 5s infinite;
+    position: absolute;
+    width: 400px;
+    z-index: 0;
+    left: -250px;
+    bottom: -50px;
+    content: '';
+    height: 400px;
+    border-radius: 100%;
+    border: 10px solid rgb(3, 39, 39);
+}
+
+@keyframes example{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+@keyframes example2{
+    from{
+        border-radius: 10%;
+        transform: rotate(0) ;
+    }
+    to{
+        border-radius: 100%;
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+/* About Us styling */
+
+#about{
+    height: max-content;
+}
+#about .inner h2 , h2{
+    width:max-content;
+    margin: auto;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    position: relative;
+}
+#about .inner div{
+    margin: 10px 0;
+}
+#about .inner .flexing-data p {
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(1, 19, 19);
+    color: white;
+    border-bottom: 10px solid rgb(2, 53, 53);
+    padding: 30px;
+    margin: 20px 0; 
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease; 
+    cursor: pointer;
+}
+
+#about .inner .flexing-data p:hover {
+    background-color: rgb(2, 53, 53); 
+}
+
+
+
+/* Our Features */
+
+
+#features .inner h2{
+    margin-bottom: 30px;
+}
+#features{
+    height: max-content;
+    background-color: lightcyan;
+    border-radius: 80px 0 80px 0;
+}
+
+#features .inner .features-box{
+    /* background-color: green; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:20px 10px;
+}
+
+#features .inner .features-box .feature{
+    /* background-color: red; */
+    width:200px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap:10px;
+    background-color: white;
+    border-radius: 0 0 30px 30px;
+    border-top: 6px solid rgb(3, 39, 39);
+    transition: all 0.3s ease;
+}
+
+#features .inner .features-box .feature:hover{
+    border-radius: 5px 5px 40px 40px;
+    cursor: pointer;
+}
+
+#features .inner .features-box .feature p{
+    text-align: center;
+}
+
+.feature .title{
+    font-weight: bold;
+}
+
+
+.feature i{
+    background-color: rgb(3, 39, 39);
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+
+/* Contact */
+
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
+
+#contact form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(19, 190, 190);
+    padding: 40px;
+    border-radius: 0 0 50px 50px;
+    gap: 8px;
+    border-top: 10px solid rgb(0, 15, 15);
+}
+
+#contact form input ,#contact form textarea {
+    padding: 10px;
+    border: none;
+    border-radius:10px ;
+}
+
+#contact form textarea{
+    resize: none;
+}
+
+#contact form button{
+    padding: 10px;
+    border: none;
+    background-color: rgb(0, 14, 14);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#contact form button:hover{
+    background-color: rgb(35, 87, 5);
+}
+
+
+/* Footer  */
+footer{
+    background-color: rgb(1, 31, 31);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-around;
+}
+.icon-set{
+    display: flex;
+    gap: 8px;
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 3px;
+}
+
+#footer p{
+    color: white;
+}
+
+.icon-set a i{
+    color: rgb(1, 39, 39);
+    transition: all 0.3s ease;
+    margin: 0 3px;
+}
+
+.icon-set a i:hover{
+    color: darkcyan;
+}
